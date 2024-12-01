@@ -8,7 +8,7 @@ const First = () => {
         <span className="text-[var(--Purple-500)] italic-font">quicker.</span>
       </h2>
       <img
-        src="/public/images/illustration-create-post.webp"
+        src="./images/illustration-create-post.webp"
         alt="Create Post"
         className="w-full h-24 object-contain"
       />
