@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Db Sans";
-  src: url("../public/fonts/DMSans-VariableFont_opsz\,wght.ttf");
+  src: url("./fonts/DMSans-VariableFont_opsz\,wght.ttf");
 }
 @font-face {
   font-family: "Db Sans Italic";
-  src: url("../public/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
+  src: url("./fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
 }
 
 :root {
@@ -83,7 +83,6 @@
 @media Screen and (min-width: 768px) {
   .wrapper {
     grid-template-columns: auto;
-    /* grid-template-rows: repeat(4, 110px); */
     grid-template-rows: auto;
     grid-template-areas:
       "one  one two two"
@@ -94,7 +93,7 @@
   }
 }
 
-@media Screen and (min-width: 1200px) {
+@media Screen and (min-width: 1280px) {
   .wrapper {
     grid-template-columns: auto;
     grid-template-rows: repeat(6, 110px);
