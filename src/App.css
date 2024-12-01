@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Db Sans";
+  src: url("/public/fonts/DMSans-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "Db Sans Italic";
+  src: url("/public/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
+}
+
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+
+  --font: "Db Sans";
+  --font-italic: "Db Sans Italic";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  background: var(--White);
+  justify-content: center;
+  color: var(--Black);
+  align-items: center;
+  background: #ddded0;
+}
+
+.italic-font {
+  font-family: var(--font-italic) !important;
+}
+
+.first--container {
+  grid-area: one;
+}
+.second--container {
+  grid-area: two;
+}
+.third--container {
+  grid-area: three;
+}
+.fourth--container {
+  grid-area: four;
+}
+.fifth--container {
+  grid-area: five;
+}
+.sixth--container {
+  grid-area: six;
+}
+.seventh--container {
+  grid-area: seven;
+}
+.eighth--container {
+  grid-area: eight;
+}
+
+.wrapper {
+  grid-template-rows: repeat(8, auto);
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight";
+}
+
+@media Screen and (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: auto;
+    /* grid-template-rows: repeat(4, 110px); */
+    grid-template-rows: auto;
+    grid-template-areas:
+      "one  one two two"
+      "seven seven four four"
+      "five five six six"
+      "five five six six"
+      "three three eight eight";
+  }
+}
+
+@media Screen and (min-width: 1200px) {
+  .wrapper {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 110px);
+    grid-template-areas:
+      "one two two two two three"
+      "one two two two two three"
+      "one five five six six three"
+      "four five five six six three"
+      "four seven seven eight eight eight"
+      "four seven seven eight eight eight";
+  }
+}
